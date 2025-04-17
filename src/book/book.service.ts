@@ -22,7 +22,7 @@ export class BookService {
         return "Book deleted successfully"
     }
 
-    getBook(id : number) : BookEntity {
+    getBookById(id : number) : BookEntity {
         const book = this.booksData.find(book => book.id === id)
         if(!book) {
             throw new Error("Book not found")
@@ -30,7 +30,7 @@ export class BookService {
         return book
     }
 
-    getBooks() : BookEntity[] {
+    getAllBooks() : BookEntity[] {
         return this.booksData;
     }
 }
