@@ -17,4 +17,19 @@ export class BookResolver {
     getBookById(id : number) : BookEntity {
         return this.bookService.getBookById(id);
     }
+
+    @Query(returns => String)
+    addBook(book : Book) : string {
+        return this.bookService.addBook(book);
+    }
+
+    @Query(returns => String)
+    deleteBook(id : number) : string {
+        return this.bookService.deleteBook(id);
+    }
+
+    @Query(returns => String)
+    updateBook(id : number, updateBook : Book) : string {
+        return this.bookService.updateBook(id, updateBook);
+    }
 }
