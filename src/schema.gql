@@ -3,12 +3,16 @@
 # ------------------------------------------------------
 
 type Book {
-  id: Int!
+  id: Float!
   title: String!
-  price: Int
+  price: Float!
 }
 
 type Query {
-  books: [Book!]!
-  book: Book!
+  index: String!
+  getAllBooks: [Book!]!
+  getBookById: Book!
+  addBook: String!
+  deleteBook: String!
+  updateBook: String!
 }
